@@ -20,7 +20,7 @@ const Products = ({cat,sort,filters}) => {
   useEffect(()=>{
     const getProducts = async()=>{
       try{
-        const res = await axios.get( cat ? `http://localhost:5000/api/products?category=${cat}` : "http://localhost:5000/api/products")
+        const res = await axios.get( cat ? `https://aj-store-backend.onrender.com/api/products?category=${cat}` : "https://aj-store-backend.onrender.com/api/products")
 
         setProducts(res.data)
 
